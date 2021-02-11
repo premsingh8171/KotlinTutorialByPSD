@@ -6,6 +6,10 @@
     <string name="hint">Please type language...</string>
     <string name="submit">Submit</string>
     <string name="submitted_lang">Submitted language:</string>
+    <string name="checkedTextView">CheckTextView</string>
+    <string name="checked">checked</string>
+    <string name="unchecked">unchecked</string>
+    <string name="msg_shown">Msg Shown</string>
 
     <string-array name="Languages">
         <item>Java</item>

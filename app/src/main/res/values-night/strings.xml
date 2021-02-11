@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="text_view">hello prem</string>
+    <string name="checkedTextView">CheckTextView</string>
+    <string name="checked">checked</string>
+    <string name="unchecked">unchecked</string>
+    <string name="msg_shown">Msg Shown</string>
 </resources>

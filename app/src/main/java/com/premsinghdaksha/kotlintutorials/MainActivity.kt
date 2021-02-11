@@ -1,37 +1,30 @@
 package com.premsinghdaksha.kotlintutorials
 
-import android.graphics.Color
 import android.os.Bundle
-import android.util.TypedValue
-import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.util.Log
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val layout = findViewById<RelativeLayout>(R.id.root);
-        val textView = TextView(this)
+        val autotextView = findViewById<AutoCompleteTextView>(R.id.autoTextView)
+        // Get the array of languages
+        val languages = resources.getStringArray(R.array.Languages)
+        // Create adapter and add in AutoCompleteTextView
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, languages)
+       // autotextView.setAdapter(adapter)
 
-        textView.layoutParams = LinearLayout.LayoutParams(
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
-        )
-
-        textView.setText("Hello Prem Singh")
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 40f)
-        textView.setTextColor(Color.MAGENTA)
-
-        textView.setOnClickListener() {
-            Toast.makeText(this@MainActivity, "Hello ", Toast.LENGTH_LONG).show()
-
-        }
-        layout?.addView(textView)
-
+        val button = findViewById<Button>(R.id.btn)
+        if (button != null) {
+        button ?.setOnClickListener(View.OnClickListener {
+            val enteredText = getString(R.string.submitted_lang) + " " + autotextView.getText()
+        })
+    }
     }
 }

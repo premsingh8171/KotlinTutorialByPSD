@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">KotlinTutorials</string>
     <string name="text_view">hello prem</string>
+
+
+    <string name="hint">Please type language...</string>
+    <string name="submit">Submit</string>
+    <string name="submitted_lang">Submitted language:</string>
+
+    <string-array name="Languages">
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>Swift</item>
+        <item>Python</item>
+        <item>Scala</item>
+        <item>Perl</item>
+        <item>Javascript</item>
+        <item>Jquery</item>
+    </string-array>
+
 </resources>

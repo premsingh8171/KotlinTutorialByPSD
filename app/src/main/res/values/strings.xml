@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">KotlinTutorials</string>
+    <string name="text_view">hello prem</string>
+</resources>

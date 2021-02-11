@@ -1,31 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http:// schemas.android.com/apk/res/android"
-    xmlns:android1="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android1:layout_width="match_parent"
-    android1:layout_height="wrap_content"
-    android1:orientation="vertical"
-    android:gravity="center"
-    android1:layout_gravity="center"
-    android:id="@+id/linear_layout"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    tools:ignore="NamespaceTypo">
-
-    <AutoCompleteTextView
-        android1:gravity="center"
-        android1:layout_gravity="center"
-        android1:layout_width="match_parent"
-        android1:layout_height="wrap_content"
-        android:hint="@string/hint"
-        android:id="@+id/autoTextView"
-        android:layout_margin="20dp" />
-
-    <Button
-        android1:textColor="@color/white"
-        android1:layout_gravity="center"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android:id="@+id/btn"
-        android:text="@string/submit" />
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linear_layout"
+    android:gravity = "center">
 
 </LinearLayout>

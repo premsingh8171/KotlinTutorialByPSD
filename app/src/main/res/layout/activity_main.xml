@@ -3,13 +3,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/linear_layout">
+    android:id="@+id/linear_layout"
+    android:gravity="center">
 
     <EditText
         android:id="@+id/Num1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
         android:ems="10"
         android:hint= "Enter first number"/>
 
@@ -17,14 +17,7 @@
         android:id="@+id/Num2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
         android:ems="10"
         android:hint= "Enter second number"/>
 
-    <ImageButton
-        android:id="@+id/imageBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:src="@android:drawable/btn_plus" />
 </LinearLayout>

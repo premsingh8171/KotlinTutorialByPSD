@@ -2,17 +2,31 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
+    <!--EditText with id editText-->
+
+    <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="25dp">
-    </RadioGroup>
+        android:layout_margin="16dp"
+        android:hint="Input"
+        android:inputType="text"/>
+
+    <!--Button with id showInput-->
+
+    <Button
+        android:id="@+id/showInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="show"
+        android:backgroundTint="@color/black"
+        android:textColor="@android:color/white"
+        />
+
 </LinearLayout>

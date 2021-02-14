@@ -7,4 +7,5 @@
     <string name="msg_shown">Msg Shown</string>
     <string name="btn">submit</string>
     <string name="message">Clicked</string>
+    <string name="pleaseenter">Please enter both numbers</string>
 </resources>

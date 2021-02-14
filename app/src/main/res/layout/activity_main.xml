@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/activity_main"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <!--EditText with id editText-->
-
-    <EditText
-        android:id="@+id/editText"
+    <LinearLayout
+        android:id="@+id/editTextLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="Input"
-        android:inputType="text"/>
-
-    <!--Button with id showInput-->
+        android:orientation="vertical">
+    </LinearLayout>
 
     <Button
-        android:id="@+id/showInput"
+        android:id="@+id/buttonShow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="show"
-        android:backgroundTint="@color/black"
-        android:textColor="@android:color/white"
-        />
+        android:text="Show text">
+    </Button>
 
 </LinearLayout>

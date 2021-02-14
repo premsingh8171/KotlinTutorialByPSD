@@ -24,5 +24,9 @@
         <item>Javascript</item>
         <item>Jquery</item>
     </string-array>
-
+    <string name="black">Black</string>
+    <string name="white">White</string>
+    <string name="blue">Blue</string>
+    <string name="green">Greeen</string>
+    <string name="you_selected">You selected:</string>
 </resources>

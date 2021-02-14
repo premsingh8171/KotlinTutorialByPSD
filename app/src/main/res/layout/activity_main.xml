@@ -1,23 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/linear_layout"
-    android:gravity="center">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <EditText
-        android:id="@+id/Num1"
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dbeceb"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Which is your favorite color?"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radio_button_click"
+            android:text="RED" />
+
+        <RadioButton
+            android:id="@+id/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radio_button_click"
+            android:text="GREEN" />
+
+        <RadioButton
+            android:id="@+id/yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radio_button_click"
+            android:text="YELLOW" />
+
+        <RadioButton
+            android:id="@+id/pink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radio_button_click"
+            android:text="PINK" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint= "Enter first number"/>
-
-    <EditText
-        android:id="@+id/Num2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint= "Enter second number"/>
-
+        android:text="Get Selected Color" />
 </LinearLayout>

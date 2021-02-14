@@ -1,9 +1,11 @@
 package com.premsinghdaksha.kotlintutorials
 
 import android.os.Bundle
+import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,26 +13,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val num1 = findViewById<EditText>(R.id.Num1)
-        val num2 = findViewById<EditText>(R.id.Num2)
-        val imgBtn = ImageButton(this)
+        // Get radio group selected item using on checked change listener
+        radio_group.setOnCheckedChangeListener(
+                RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                    val radio: RadioButton = findViewById(checkedId)
+                    Toast.makeText(applicationContext," On checked change :"+ " ${radio.text}", Toast.LENGTH_SHORT).show()
+                })
 
-        imgBtn.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 150)
-        imgBtn.setImageResource(R.drawable.ic_launcher_background)
-
-        val linearLayout = findViewById<LinearLayout>(R.id.linear_layout)
-        // Adding ImageButton in LinearLayout
-        linearLayout.addView(imgBtn)
-
-        imgBtn.setOnClickListener {
-            if (num1.text.toString().isEmpty() || num2.text.toString().isEmpty()) {
-                Toast.makeText(applicationContext, "Enter both numbers", Toast.LENGTH_SHORT).show()
-            }
-            else {
-                val num1 = Integer.parseInt(num1.text.toString())
-                val num2 = Integer.parseInt(num2.text.toString())
-                Toast.makeText(applicationContext, "Multiplication of the numbers = " + (num1 * num2), Toast.LENGTH_SHORT).show()
+        // Get radio group selected status and text using button click event
+        button.setOnClickListener{
+            // Get the checked radio button id from radio group
+            var id: Int = radio_group.checkedRadioButtonId
+            if (id!=-1){ // If any radio button checked from radio group
+                // Get the instance of radio button using id
+                val radio:RadioButton = findViewById(id)
+                Toast.makeText(applicationContext,"On button click :" + " ${radio.text}", Toast.LENGTH_SHORT).show()
+            }else{
+                // If no radio button checked in this radio group
+                Toast.makeText(applicationContext,"On button click :" + " nothing selected", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    // Get the selected radio button text using radio button on click listener
+    fun radio_button_click(view: View){
+        // Get the clicked radio button instance
+        val radio: RadioButton = findViewById(radio_group.checkedRadioButtonId)
+        Toast.makeText(applicationContext,"On click : ${radio.text}", Toast.LENGTH_SHORT).show()
     }
 }

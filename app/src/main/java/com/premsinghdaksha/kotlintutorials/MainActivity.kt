@@ -3,11 +3,12 @@ package com.premsinghdaksha.kotlintutorials
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.ViewGroup
-import android.widget.EditText
+import android.widget.DatePicker
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,25 +17,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val editTextLinearLayout = editTextLinearLayout
-
-        //create EditText
-        val editText = EditText(this)
-        editText.setHint("Enter  something")
-        editText.layoutParams = LinearLayout.LayoutParams(
+        val datePicker = DatePicker(this)
+        val layoutParams = LinearLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
+            ViewGroup.LayoutParams.MATCH_PARENT
         )
-        editText.setPadding(20, 20, 20, 20)
+        datePicker.layoutParams = layoutParams
 
-        // Add EditText to LinearLayout
-        editTextLinearLayout?.addView(editText)
+        val linearLayout = linear_layout
+        linearLayout?.addView(datePicker)
 
-        val buttonShow = buttonShow;
-
-        buttonShow.setOnClickListener {
-            val text = editText.text
-            Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+        val today = Calendar.getInstance()
+        datePicker.init(
+            today.get(Calendar.YEAR),
+            today.get(Calendar.MONTH),
+            today.get(Calendar.DAY_OF_MONTH)
+        )
+        { view, year, month, day ->
+            val month = month + 1
+            val msg = "You Selected: $day/$month/$year"
+            Toast.makeText(this@MainActivity, msg, Toast.LENGTH_SHORT).show()
 
         }
     }

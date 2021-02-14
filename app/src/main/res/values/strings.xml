@@ -10,6 +10,8 @@
     <string name="checked">checked</string>
     <string name="unchecked">unchecked</string>
     <string name="msg_shown">Msg Shown</string>
+    <string name="btn">submit</string>
+    <string name="message">Clicked</string>
 
     <string-array name="Languages">
         <item>Java</item>
